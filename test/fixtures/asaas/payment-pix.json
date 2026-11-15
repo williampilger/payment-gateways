@@ -1,0 +1,20 @@
+{
+  "object": "payment",
+  "id": "pay_080225913252",
+  "dateCreated": "2026-11-15",
+  "customer": "cus_000005219613",
+  "value": 1,
+  "netValue": 0.01,
+  "description": "Pedido #123",
+  "billingType": "PIX",
+  "status": "PENDING",
+  "dueDate": "2026-11-16",
+  "originalDueDate": "2026-11-16",
+  "paymentDate": null,
+  "clientPaymentDate": null,
+  "invoiceUrl": "https://sandbox.asaas.com/i/080225913252",
+  "invoiceNumber": "00005101",
+  "externalReference": "pay_123",
+  "deleted": false,
+  "bankSlipUrl": null
+}

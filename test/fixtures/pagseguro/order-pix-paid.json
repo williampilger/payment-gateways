@@ -1,0 +1,18 @@
+{
+  "id": "ORDE_3E1A4C2B-1D2E-4F5A-9B8C-7D6E5F4A3B2C",
+  "reference_id": "pay_123",
+  "items": [{ "reference_id": "pay_123", "name": "Pedido #123", "quantity": 1, "unit_amount": 100 }],
+  "qr_codes": [{ "id": "QRCO_1A2B3C4D", "expiration_date": "2099-11-16T10:00:00.000-03:00", "amount": { "value": 100 }, "text": "000201...6304ABCD", "links": [] }],
+  "charges": [
+    {
+      "id": "CHAR_5F6E7D8C-1A2B-3C4D-5E6F-7A8B9C0D1E2F",
+      "reference_id": "pay_123",
+      "status": "PAID",
+      "created_at": "2026-11-15T10:05:00.000-03:00",
+      "paid_at": "2026-11-15T10:05:01.000-03:00",
+      "amount": { "value": 100, "currency": "BRL", "summary": { "total": 100, "paid": 100, "refunded": 0 } },
+      "payment_method": { "type": "PIX" },
+      "links": []
+    }
+  ]
+}

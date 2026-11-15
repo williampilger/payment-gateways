@@ -1,0 +1,15 @@
+{
+  "object": "payment",
+  "id": "pay_080225913252",
+  "customer": "cus_000005219613",
+  "value": 1,
+  "billingType": "PIX",
+  "status": "RECEIVED",
+  "dueDate": "2026-11-16",
+  "paymentDate": "2026-11-15",
+  "clientPaymentDate": "2026-11-15",
+  "confirmedDate": "2026-11-15",
+  "invoiceUrl": "https://sandbox.asaas.com/i/080225913252",
+  "externalReference": "pay_123",
+  "deleted": false
+}

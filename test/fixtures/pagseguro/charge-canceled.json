@@ -1,0 +1,7 @@
+{
+  "id": "CHAR_5F6E7D8C-1A2B-3C4D-5E6F-7A8B9C0D1E2F",
+  "reference_id": "pay_123",
+  "status": "CANCELED",
+  "amount": { "value": 100, "currency": "BRL", "summary": { "total": 100, "paid": 100, "refunded": 100 } },
+  "payment_method": { "type": "PIX" }
+}

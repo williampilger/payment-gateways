@@ -1,0 +1,9 @@
+{
+  "id": "re_3Pabc",
+  "object": "refund",
+  "amount": 50,
+  "currency": "brl",
+  "payment_intent": "pi_3Pabc",
+  "reason": null,
+  "status": "succeeded"
+}

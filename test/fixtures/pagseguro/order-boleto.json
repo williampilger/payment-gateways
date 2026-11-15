@@ -1,0 +1,27 @@
+{
+  "id": "ORDE_B0LET0-0000-0000-0000-000000000001",
+  "reference_id": "pay_456",
+  "items": [{ "reference_id": "pay_456", "name": "Pedido #456", "quantity": 1, "unit_amount": 1500 }],
+  "charges": [
+    {
+      "id": "CHAR_B0LET0-0000-0000-0000-000000000001",
+      "reference_id": "pay_456",
+      "status": "WAITING",
+      "amount": { "value": 1500, "currency": "BRL", "summary": { "total": 1500, "paid": 0, "refunded": 0 } },
+      "payment_method": {
+        "type": "BOLETO",
+        "boleto": {
+          "id": "8D8A1B6C-4A5F-4C3D-8B2E-1F0A9B8C7D6E",
+          "barcode": "03399853012970000024227020901016278150000015630",
+          "formatted_barcode": "03399.85301 29700.000242 27020.901016 2 78150000015630",
+          "due_date": "2026-11-18"
+        }
+      },
+      "links": [
+        { "rel": "SELF", "href": "https://boleto.sandbox.pagseguro.com.br/8d8a1b6c.pdf", "media": "application/pdf", "type": "GET" },
+        { "rel": "PDF", "href": "https://boleto.sandbox.pagseguro.com.br/8d8a1b6c.pdf", "media": "application/pdf", "type": "GET" },
+        { "rel": "PNG", "href": "https://boleto.sandbox.pagseguro.com.br/8d8a1b6c.png", "media": "image/png", "type": "GET" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "202809963-920c288b-4ebb-40be-966f-700250fa5370",
+  "collector_id": 202809963,
+  "external_reference": "pay_123",
+  "items": [{ "id": "pay_123", "title": "Pedido #123", "quantity": 1, "unit_price": 1, "currency_id": "BRL" }],
+  "init_point": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=202809963-920c288b-4ebb-40be-966f-700250fa5370",
+  "sandbox_init_point": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=202809963-920c288b-4ebb-40be-966f-700250fa5370",
+  "expires": false,
+  "expiration_date_to": null
+}

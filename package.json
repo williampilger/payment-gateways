@@ -1,0 +1,45 @@
+{
+  "name": "@williampilger/payment-gateways",
+  "version": "0.1.0",
+  "description": "Abstração reutilizável de gateways de pagamento (Stripe, Mercado Pago, PagBank, Asaas, manual e cortesia) usando apenas fetch nativo.",
+  "author": "will.i.am (github.com/williampilger)",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sandbox:stripe": "tsx --env-file-if-exists=.env scripts/sandbox.ts stripe",
+    "sandbox:mercadopago": "tsx --env-file-if-exists=.env scripts/sandbox.ts mercadopago",
+    "sandbox:pagseguro": "tsx --env-file-if-exists=.env scripts/sandbox.ts pagseguro",
+    "sandbox:asaas": "tsx --env-file-if-exists=.env scripts/sandbox.ts asaas"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

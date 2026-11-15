@@ -1,0 +1,15 @@
+{
+  "id": "CHEC_0D9B5A3C-6E2F-4B7A-8C1D-2E3F4A5B6C7D",
+  "reference_id": "pay_123",
+  "expiration_date": "2026-11-16T10:00:00-03:00",
+  "created_at": "2026-11-15T10:00:00-03:00",
+  "status": "ACTIVE",
+  "customer_modifiable": true,
+  "items": [{ "reference_id": "pay_123", "name": "Pedido #123", "quantity": 1, "unit_amount": 100 }],
+  "payment_methods": [{ "type": "CREDIT_CARD" }, { "type": "PIX" }, { "type": "BOLETO" }],
+  "links": [
+    { "rel": "SELF", "href": "https://sandbox.api.pagseguro.com/checkouts/CHEC_0D9B5A3C-6E2F-4B7A-8C1D-2E3F4A5B6C7D", "method": "GET" },
+    { "rel": "PAY", "href": "https://pagamento.sandbox.pagbank.com.br/pagamento?code=0d9b5a3c-6e2f-4b7a-8c1d-2e3f4a5b6c7d", "method": "GET" },
+    { "rel": "INACTIVATE", "href": "https://sandbox.api.pagseguro.com/checkouts/CHEC_0D9B5A3C-6E2F-4B7A-8C1D-2E3F4A5B6C7D/inactivate", "method": "POST" }
+  ]
+}

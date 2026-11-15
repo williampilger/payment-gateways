@@ -1,0 +1,10 @@
+{
+  "object": "customer",
+  "id": "cus_000005219613",
+  "dateCreated": "2026-11-15",
+  "name": "Fulano de Tal",
+  "email": "cliente@example.com",
+  "cpfCnpj": "12345678909",
+  "personType": "FISICA",
+  "deleted": false
+}

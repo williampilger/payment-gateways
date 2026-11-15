@@ -1,0 +1,19 @@
+{
+  "id": "evt_1PxYz",
+  "object": "event",
+  "api_version": "2025-09-30.clover",
+  "created": 1794800000,
+  "type": "checkout.session.completed",
+  "livemode": false,
+  "data": {
+    "object": {
+      "id": "cs_test_a1B2c3D4e5",
+      "object": "checkout.session",
+      "amount_total": 100,
+      "client_reference_id": "pay_123",
+      "metadata": { "externalReference": "pay_123" },
+      "payment_status": "paid",
+      "status": "complete"
+    }
+  }
+}

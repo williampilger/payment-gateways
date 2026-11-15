@@ -1,0 +1,15 @@
+{
+  "id": "evt_05b708f961d739ea7eba7e4db318f621&368604920",
+  "event": "PAYMENT_RECEIVED",
+  "dateCreated": "2026-11-15 10:05:00",
+  "payment": {
+    "object": "payment",
+    "id": "pay_080225913252",
+    "customer": "cus_000005219613",
+    "value": 1,
+    "billingType": "PIX",
+    "status": "RECEIVED",
+    "externalReference": "pay_123",
+    "deleted": false
+  }
+}

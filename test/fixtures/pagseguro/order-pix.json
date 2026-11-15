@@ -1,0 +1,25 @@
+{
+  "id": "ORDE_3E1A4C2B-1D2E-4F5A-9B8C-7D6E5F4A3B2C",
+  "reference_id": "pay_123",
+  "created_at": "2026-11-15T10:00:00.000-03:00",
+  "customer": { "name": "Fulano de Tal", "email": "cliente@example.com", "tax_id": "12345678909", "phones": [{ "country": "55", "area": "51", "number": "999999999", "type": "MOBILE" }] },
+  "items": [{ "reference_id": "pay_123", "name": "Pedido #123", "quantity": 1, "unit_amount": 100 }],
+  "qr_codes": [
+    {
+      "id": "QRCO_1A2B3C4D",
+      "expiration_date": "2099-11-16T10:00:00.000-03:00",
+      "amount": { "value": 100 },
+      "text": "00020101021226830014br.gov.bcb.pix2561api.pagseguro.com/pix/v2/1A2B3C4D5204899953039865802BR5922Fulano6009Sao Paulo62070503***6304ABCD",
+      "arrangements": ["PIX"],
+      "links": [
+        { "rel": "QRCODE.PNG", "href": "https://sandbox.api.pagseguro.com/qrcode/QRCO_1A2B3C4D/png", "media": "image/png", "type": "GET" },
+        { "rel": "QRCODE.BASE64", "href": "https://sandbox.api.pagseguro.com/qrcode/QRCO_1A2B3C4D/base64", "media": "text/plain", "type": "GET" }
+      ]
+    }
+  ],
+  "notification_urls": ["https://example.com/webhooks/pagseguro"],
+  "links": [
+    { "rel": "SELF", "href": "https://sandbox.api.pagseguro.com/orders/ORDE_3E1A4C2B-1D2E-4F5A-9B8C-7D6E5F4A3B2C", "media": "application/json", "type": "GET" },
+    { "rel": "PAY", "href": "https://sandbox.api.pagseguro.com/orders/ORDE_3E1A4C2B-1D2E-4F5A-9B8C-7D6E5F4A3B2C/pay", "media": "application/json", "type": "POST" }
+  ]
+}

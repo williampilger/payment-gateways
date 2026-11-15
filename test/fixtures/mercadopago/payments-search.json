@@ -1,0 +1,7 @@
+{
+  "paging": { "total": 2, "limit": 30, "offset": 0 },
+  "results": [
+    { "id": 1325770001, "status": "rejected", "status_detail": "cc_rejected_insufficient_amount", "transaction_amount": 1, "external_reference": "pay_123" },
+    { "id": 1325770002, "status": "approved", "status_detail": "accredited", "transaction_amount": 1, "external_reference": "pay_123", "date_approved": "2026-11-15T10:05:00.000-04:00" }
+  ]
+}

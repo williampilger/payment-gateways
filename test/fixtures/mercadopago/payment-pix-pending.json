@@ -1,0 +1,22 @@
+{
+  "id": 1325769823,
+  "status": "pending",
+  "status_detail": "pending_waiting_transfer",
+  "payment_method_id": "pix",
+  "payment_type_id": "bank_transfer",
+  "transaction_amount": 1,
+  "currency_id": "BRL",
+  "description": "Pedido #123",
+  "external_reference": "pay_123",
+  "date_created": "2026-11-15T10:00:00.000-04:00",
+  "date_approved": null,
+  "date_of_expiration": "2026-11-16T10:00:00.000-04:00",
+  "point_of_interaction": {
+    "type": "PIX",
+    "transaction_data": {
+      "qr_code": "00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Fulano de Tal6008BRASILIA62070503***63041D3D",
+      "qr_code_base64": "iVBORw0KGgoAAAANSUhEUgAA",
+      "ticket_url": "https://www.mercadopago.com.br/payments/1325769823/ticket?caller_id=1&hash=abc"
+    }
+  }
+}
