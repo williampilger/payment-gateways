@@ -8,29 +8,32 @@ com adapters para **Stripe**, **Mercado Pago**, **PagSeguro/PagBank**, **Asaas**
 - Sem banco, sem framework: o consumidor é a fonte da verdade e grava o que quiser.
 - Dinheiro sempre em **centavos inteiros** (`amountCents`).
 - Webhooks **sempre** com verificação de assinatura/token (`WebhookSignatureError` quando inválido).
-- ESM + `.d.ts` (tsup), Node >= 22, TypeScript strict, testes com Vitest.
+- Consumido **pelo código-fonte** (TypeScript), sem build: Node >= 22, TypeScript strict, testes com Vitest.
 
-## Instalação
+## Instalação (submódulo + workspace)
 
-Enquanto o pacote não é publicado, use como dependência local (pasta irmã):
+Mesmo modelo do CoreCAD na Authenty: o repo entra como **submódulo git** em `vendor/` e vira um **pacote do
+workspace** do consumidor. Sem registry, sem `file:`, sem `dist/`.
 
-```jsonc
-// package.json do projeto consumidor
-{
-  "dependencies": {
-    "@williampilger/payment-gateways": "file:../payment-gateways"
-  }
-}
+```bash
+git submodule add git@github.com:williampilger/payment-gateways.git vendor/payment-gateways
 ```
 
-> `file:` cria um link simbólico para a pasta — o `dist/` precisa existir. Rode `npm install` (o script `prepare`
-> executa o build) ou `npm run build` dentro de `payment-gateways` sempre que alterar o código.
-
-Futuramente, direto do GitHub (o `prepare` gera o `dist/` na instalação):
-
 ```jsonc
-"@williampilger/payment-gateways": "github:williampilger/payment-gateways#v0.1.0"
+// package.json (raiz do consumidor)
+"workspaces": ["apps/*", "packages/*", "vendor/payment-gateways"]
+
+// package.json do pacote que usa
+"dependencies": { "@williampilger/payment-gateways": "*" }
 ```
+
+- `exports` aponta para `src/index.ts`: o consumidor transpila (Next: `transpilePackages`; worker: `tsx`).
+- Quem clona o consumidor: `git clone --recurse-submodules` ou `git submodule update --init`.
+- CI do consumidor: `actions/checkout` com `submodules: recursive` e um token com leitura neste repo (é privado).
+- Alterar o pacote: editar dentro de `vendor/payment-gateways`, commitar/pushar **aqui** e depois commitar o novo
+  ponteiro do submódulo no consumidor.
+- `npm run build` (tsup → `dist/`) só existe para uma eventual publicação; `publishConfig` troca os `exports` para o
+  `dist/` nesse caso.
 
 ## Uso rápido
 
@@ -177,13 +180,17 @@ Mercado Pago `in_mediation` (disputa aberta) → `CHARGEBACK`. Asaas `REFUND_REQ
 Implemente a interface `PaymentGateway` e registre no `createPaymentRegistry` — veja
 [docs/adicionar-gateway.md](docs/adicionar-gateway.md).
 
+## Histórico
+
+Ver [CHANGELOG.md](CHANGELOG.md).
+
 ## Desenvolvimento
 
 ```bash
-npm install          # instala e builda (prepare)
+npm install          # isolado (fora de um consumidor)
 npm run typecheck
 npm test
-npm run build        # dist/ (ESM + .d.ts)
+npm run build        # dist/ (ESM + .d.ts) - só para publicação
 
 cp .env.sample .env  # credenciais de SANDBOX
 npm run sandbox:mercadopago   # cria PIX de R$ 1,00 e consulta o status

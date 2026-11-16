@@ -1,6 +1,6 @@
 {
   "name": "@williampilger/payment-gateways",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Abstração reutilizável de gateways de pagamento (Stripe, Mercado Pago, PagBank, Asaas, manual e cortesia) usando apenas fetch nativo.",
   "author": "will.i.am (github.com/williampilger)",
   "license": "UNLICENSED",
@@ -9,24 +9,32 @@
   "engines": {
     "node": ">=22"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./package.json": "./package.json"
+    }
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "docs"
   ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",
-    "prepare": "npm run build",
     "typecheck": "tsc --noEmit -p .",
     "test": "vitest run",
     "test:watch": "vitest",

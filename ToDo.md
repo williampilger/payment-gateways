@@ -21,7 +21,7 @@ Legenda: `[X]` feito · `[ ]` pendente · ⚠️ prioridade
 - [X] Testes com fetch falso + fixtures; scripts de sandbox
 - [ ] Retry com backoff para 429/5xx (respeitando idempotência)
 - [ ] Hook de log opcional (requisição/resposta, com mascaramento de dados sensíveis)
-- [ ] Publicar no GitHub (tag `v0.1.0`) e trocar o consumidor para `github:`
+- [X] Consumo por submódulo + workspace (código-fonte), no modelo do CoreCAD - ver CHANGELOG 0.2.0
 
 ## Futuro
 
